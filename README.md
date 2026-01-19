@@ -1,4 +1,4 @@
-# Di-BM Policy for RoboTwin
+# Di-BM Policy
 
 This repository contains the implementation of the Di-BM policy within the [RoboTwin](https://github.com/RoboTwin-Platform/RoboTwin) framework. Follow the steps below to set up the environment, collect data, train the model, and evaluate the policy.
 
