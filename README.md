@@ -32,7 +32,7 @@ pip install -e .
 
 Use the `collect_data.sh` script to generate data for a specific task.
 
-**Syntax:**
+
 ```bash
 bash collect_data.sh ${task_name} ${task_config} ${gpu_id}
 ```
@@ -45,7 +45,7 @@ bash collect_data.sh beat_block_hammer demo_clean 0
 ### 2.2 Synthesize Multi-Task Zarr Dataset
 Once single-task datasets are collected, process them into a multi-task Zarr format.
 
-**Syntax:**
+
 ```bash
 cd policy/Di-BM
 bash process_data.sh ${task_names} ${task_config} ${expert_data_num}
@@ -63,7 +63,7 @@ The Zarr dataset is located at `/data/multi_task-demo_clean-50.zarr`.
 
 To train the policy, use the `train.sh` script in `policy/Di-BM`.
 
-**Syntax:**
+
 ```bash
 bash train.sh ${task_name} ${task_config} ${expert_data_num} ${seed} ${action_dim} ${gpu_id}
 ```
@@ -82,7 +82,7 @@ bash train.sh multi_task demo_clean 50 0 14 0
 ### 4.1 Compute Z
 First, calculate the `Z` values for the experts using the `compute_Z.sh` script.
 
-**Syntax:**
+
 ```bash
 bash eval.sh ${task_name} ${task_config} ${ckpt_setting} ${expert_data_num} ${seed} ${gpu_id} ${ckpt_path}
 ```
@@ -110,7 +110,7 @@ self.Z = torch.Tensor([[18.739338, 23.333763, 13.635132, 6.825393, 76.133156]]).
 1. **Set Checkpoint:** Open `./deploy_policy.yml` and set the `checkpoint_num` variable to the specific checkpoint you wish to evaluate.
 2. **Run Evaluation:**
 
-**Syntax:**
+
 ```bash
 bash eval.sh ${task_name} ${task_config} ${ckpt_setting} ${expert_data_num} ${seed} ${gpu_id}
 ```
