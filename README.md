@@ -1,4 +1,6 @@
-# Di-BM Policy
+[[Paper]](https://arxiv.org/abs/2601.12397) [[Project Page]](https://robotnav-bot.github.io/Di-BM-project/)
+# Learning Diverse Skills for Behavior Models with Mixture of Experts
+
 
 This repository contains the implementation of the Di-BM policy within the [RoboTwin](https://github.com/RoboTwin-Platform/RoboTwin) framework. Follow the steps below to set up the environment, collect data, train the model, and evaluate the policy.
 
@@ -119,3 +121,19 @@ bash eval.sh adjust_bottle demo_clean demo_clean 50 0 0
 ```
 
 The results will be shown in `RoboTwin/eval_result`
+
+
+## Citation
+
+If you find this work useful in your research, please consider citing:
+
+```bibtex
+@misc{shen2026learningdiverseskillsbehavior,
+      title={Learning Diverse Skills for Behavior Models with Mixture of Experts}, 
+      author={Wangtian Shen and Jinming Ma and Mingliang Zhou and Ziyang Meng},
+      year={2026},
+      eprint={2601.12397},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2601.12397}, 
+}
